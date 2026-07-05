@@ -1,0 +1,3 @@
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run 下的 MyMonitor 键值。
+输入第一行设置的退出密码（如“我的退出密码”），程序自身会退出。
+

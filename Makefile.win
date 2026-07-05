@@ -1,0 +1,28 @@
+# Project: ban
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o
+LINKOBJ  = main.o
+LIBS     = -L"C:/TDM-GCC-64/lib" -L"C:/TDM-GCC-64/x86_64-w64-mingw32/lib" -std=c++20 -O2 -Wall -Wextra -Wpedantic -static -static-libgcc -static-libstdc++ -mconsole -pipe -s -fno-exceptions -fno-rtti -fomit-frame-pointer -fno-ident -ffunction-sections -fdata-sections -Wl,--gc-sections -Wl,--strip-all -lwinmm -lws2_32 -lwsock32 -lgdi32 -luser32 -lkernel32 -lcomctl32 -lcomdlg32 -lshell32 -lole32 -loleaut32 -luuid -ladvapi32 -lopengl32 -lglu32 -fexceptions -static-libstdc++ -static-libgcc -lgdi32 -lole32 -lwinmm  -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 -mwindows
+INCS     = -I"C:/TDM-GCC-64/include" -I"C:/TDM-GCC-64/x86_64-w64-mingw32/include"
+CXXINCS  = 
+BIN      = ban.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
